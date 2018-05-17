@@ -18,34 +18,15 @@ Prerequisites
 - JDK 8
 - Maven 3
 
-Create project
---------------
+Install archetype locally
+-------------------------
 
-Interactive mode
-
-```bash
-    mvn archetype:generate \
-        -DarchetypeGroupId=pt.up.fc.dcc.asura.builder \
-        -DarchetypeArtifactId=maven-archetype-asura-game \
-        -DarchetypeVersion=0.0.1 \
-        -DarchetypeRepository=https://mooshak-dcc.github.io/maven-archetype-asura-game/
-```
-
-Batch mode
+To install the archetype in your local repository execute the following commands:
 
 ```bash
-    mvn archetype:generate -B \
-        -DarchetypeGroupId=pt.up.fc.dcc.asura.builder \
-        -DarchetypeArtifactId=maven-archetype-asura-game \
-        -DarchetypeVersion=0.0.1 \
-        -DarchetypeRepository=https://mooshak-dcc.github.io/maven-archetype-asura-game/ \
-        -DgroupId=my.groupId \
-        -DartifactId=my-artifactId \
-        -Dversion=version \
-        -Dpackage=mypackage.name \
-        -DgameName=MyGameName \
-        -Dauthor="My Full Name" \
-        -DauthorEmail=me@myemail
+    git clone https://github.com/mooshak-dcc/maven-archetype-asura-game
+    cd maven-archetype-asura-game
+    mvn clean install
 ```
 
 Create a new project in Eclipse
@@ -58,13 +39,12 @@ Create a new project in Eclipse
 * Set `Group Id` to `pt.up.fc.dcc.asura.builder`
 * Set `Artifact Id` to `maven-archetype-asura-game`
 * Set `Version` to `0.0.1`
-* Set `Repository` to `https://raw.github.com/mooshak-dcc/mooshak-maven-repo/maven-archetype-asura-game-0.0.1`
 * Select the added archetype and click `Next`
 * Set  `Group Id`, `Artifact Id`, `Version`, and `Package` of your project
 * Add `gameName`, `author` and `authorEmail` properties for your project and click `Next`
 * Click `Finish` and create the project
 
-Note: If you would like to create a project using archetype published in your local repository, skip repository field and make sure it is installed locally (see below).
+Note: You need to have the archetype installed in your local repository.
 
 Create a new project in IntelliJ
 --------------------------------
@@ -76,23 +56,11 @@ Create a new project in IntelliJ
 * Set `Group Id` to `pt.up.fc.dcc.asura.builder`
 * Set `Artifact Id` to `maven-archetype-asura-game`
 * Set `Version` to `0.0.1`
-* Set `Repository` to `https://raw.github.com/mooshak-dcc/mooshak-maven-repo/maven-archetype-asura-game-0.0.1`
 * Set  `Group Id`, `Artifact Id` and `Version` of your project, and click `Next`
 * Add `package`, `gameName`, `author` and `authorEmail` properties for your project  and click `Next`
 * Click `Next` and create the project
 
-Note: If you would like to create a project using archetype published in your local repository, skip repository field and make sure it is installed locally (see below).
-
-Install archetype locally
--------------------------
-
-To install the archetype in your local repository execute the following commands:
-
-```bash
-    git clone https://github.com/mooshak-dcc/maven-archetype-asura-game
-    cd maven-archetype-asura-game
-    mvn clean install
-```
+Note: You need to have the archetype installed in your local repository.
 
 Create a project from a local repository
 ----------------------------------------
