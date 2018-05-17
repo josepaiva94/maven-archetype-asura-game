@@ -29,14 +29,6 @@
         <github.global.server>github</github.global.server>
     </properties>
 
-    <repositories>
-        <repository>
-            <id>maven-archetype-asura-game-repo</id>
-            <url>http://mooshak-dcc.github.io/maven-archetype-asura-game</url>
-            <layout>default</layout>
-        </repository>
-    </repositories>
-
     <distributionManagement>
         <repository>
             <id>internal.repo</id>
