@@ -18,6 +18,36 @@ Prerequisites
 - JDK 8
 - Maven 3
 
+Create project
+--------------
+
+Interactive mode
+
+```bash
+    mvn archetype:generate \
+        -DarchetypeGroupId=pt.up.fc.dcc.asura.builder \
+        -DarchetypeArtifactId=maven-archetype-asura-game \
+        -DarchetypeVersion=0.0.1 \
+        -DarchetypeRepository=https://mooshak-dcc.github.io/maven-archetype-asura-game/
+```
+
+Batch mode
+
+```bash
+    mvn archetype:generate -B \
+        -DarchetypeGroupId=pt.up.fc.dcc.asura.builder \
+        -DarchetypeArtifactId=maven-archetype-asura-game \
+        -DarchetypeVersion=0.0.1 \
+        -DarchetypeRepository=https://mooshak-dcc.github.io/maven-archetype-asura-game/ \
+        -DgroupId=my.groupId \
+        -DartifactId=my-artifactId \
+        -Dversion=version \
+        -Dpackage=mypackage.name \
+        -DgameName=MyGameName \
+        -Dauthor="My Full Name" \
+        -DauthorEmail=me@myemail
+```
+
 Create a new project in Eclipse
 -------------------------------
 
