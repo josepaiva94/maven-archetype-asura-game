@@ -157,7 +157,7 @@
                 <configuration>
                     <includePluginDependencies>true</includePluginDependencies>
                     <mainClass>pt.up.fc.dcc.asura.builder.GameServer</mainClass>
-                    <commandlineArgs>${artifactId} ${package}.${gameName}Manager java solutions/My${gameName}Player.java player-java js solutions/My${gameName}Player.js player-js</commandlineArgs>
+                    <commandlineArgs>${artifactId} ${package}.${gameName}Manager java solutions/My${gameName}Player.java player-java es6 solutions/My${gameName}PlayerES6.js player-es6</commandlineArgs>
                 </configuration>
             </plugin>
         </plugins>
