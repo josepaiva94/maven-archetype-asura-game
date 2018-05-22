@@ -4,43 +4,45 @@
 
 // ------------------------ Skeleton --------------------------------
 
-const ${gameName}Player = require('./${artifactId}/wrappers/es6/${gameName}Player');
+load('${artifactId}/wrappers/es6/${gameName}Player.js');
 
-/**
- * ${gameName} player in Javascript
- *
- * @author ${author} <code>${authorEmail}</code>
- */
-class My${gameName}Player extends ${gameName}Player {
-
-    // ---------------------- Your code below ---------------------------
+(function (exports) {'use strict';
 
     /**
-     * Get the name of the player
+     * ${gameName} player in Javascript
      *
-     * @returns {string} name of the player
+     * @author ${author} <code>${authorEmail}</code>
      */
-    getName() {
-        return '${author}';
+    class My${gameName}Player extends ${gameName}Player {
+
+        // ---------------------- Your code below ---------------------------
+
+        /**
+         * Get the name of the player
+         *
+         * @returns {string} name of the player
+         */
+        getName() {
+            return '${author}';
+        }
+
+        /**
+         * Initialize the player
+         */
+        init() {
+
+        }
+
+        /**
+         * Execute player action
+         */
+        execute() {
+
+        }
     }
 
-    /**
-     * Initialize the player
-     */
-    init() {
 
-    }
+    // ------------------------ Skeleton --------------------------------
 
-    /**
-     * Execute player action
-     */
-    execute() {
-
-    }
-}
-
-
-// ------------------------ Skeleton --------------------------------
-
-// export this player
-module.exports = My${gameName}Player;
+    exports.Player = My${gameName}Player;
+}(this));

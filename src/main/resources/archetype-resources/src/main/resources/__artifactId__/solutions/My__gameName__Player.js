@@ -4,47 +4,50 @@
 
 // ------------------------ Skeleton --------------------------------
 
-var ${gameName}Player = require('./${artifactId}/wrappers/js/${gameName}Player');
+load('${artifactId}/wrappers/js/${gameName}Player.js');
 
-/**
- * ${gameName} player in Javascript
- *
- * @author ${author} <code>${authorEmail}</code>
- */
-function My${gameName}Player() {
-    ${gameName}Player.call(this);
-}
+(function (exports) {'use strict';
 
-My${gameName}Player.prototype = Object.create(${gameName}Player.prototype);
+    /**
+     * ${gameName} player in Javascript
+     *
+     * @author ${author} <code>${authorEmail}</code>
+     */
+    function My${gameName}Player() {
+        ${gameName}Player.call(this);
+    }
 
-// ---------------------- Your code below ---------------------------
+    My${gameName}Player.prototype = Object.create(${gameName}Player.prototype);
 
-/**
- * Get the name of the player
- *
- * @returns {string} name of the player
- */
-My${gameName}Player.prototype.getName = function () {
-    return '${author}';
-};
+    // ---------------------- Your code below ---------------------------
 
-/**
- * Initialize the player
- */
-My${gameName}Player.prototype.init = function () {
+    /**
+     * Get the name of the player
+     *
+     * @returns {string} name of the player
+     */
+    My${gameName}Player.prototype.getName = function () {
+        return '${author}';
+    };
 
-
-};
-
-/**
- * Execute player action
- */
-My${gameName}Player.prototype.execute = function () {
+    /**
+     * Initialize the player
+     */
+    My${gameName}Player.prototype.init = function () {
 
 
-};
+    };
 
-// ------------------------ Skeleton --------------------------------
+    /**
+     * Execute player action
+     */
+    My${gameName}Player.prototype.execute = function () {
 
-// export this player
-module.exports = My${gameName}Player;
+
+    };
+
+    // ------------------------ Skeleton --------------------------------
+
+    exports.Player = My${gameName}Player;
+}(this));
+
