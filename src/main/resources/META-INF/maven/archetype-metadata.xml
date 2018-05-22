@@ -5,7 +5,9 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
     <requiredProperties>
-        <requiredProperty key="gameName"/>
+        <requiredProperty key="gameName" >
+            <validationRegex><![CDATA[^([a-zA-Z][a-zA-Z\d]*)$]]></validationRegex>
+        </requiredProperty>
         <requiredProperty key="author"/>
         <requiredProperty key="authorEmail"/>
     </requiredProperties>
