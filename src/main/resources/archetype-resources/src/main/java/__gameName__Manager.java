@@ -4,6 +4,8 @@
 package ${package};
 
 import pt.up.fc.dcc.asura.builder.base.*;
+import pt.up.fc.dcc.asura.builder.base.exceptions.BuilderException;
+import pt.up.fc.dcc.asura.builder.base.exceptions.PlayerException;
 import pt.up.fc.dcc.asura.builder.base.movie.GameMovieBuilderImpl;
 
 import java.io.IOException;
@@ -35,14 +37,11 @@ public class ${gameName}Manager extends GameManager {
     }
 
     @Override
-    public void manage(GameState state, Map<String, Process> players) throws IOException {
+    protected void manage(GameState state, Map<String, Process> players)
+            throws BuilderException, PlayerException {
 
-        if (players.size() < 1)
-            throw new IllegalArgumentException("Invalid number of players: " + players.size());
-
-        currentState = state;
-
-        movieBuilder = new GameMovieBuilderImpl();
+        if (players.size() < getMinPlayersPerMatch() || players.size() > getMaxPlayersPerMatch())
+            throw new BuilderException("Invalid number of players: " + players.size());
 
         try (Streamer streamer = new Streamer(players)) {
 
@@ -54,10 +53,16 @@ public class ${gameName}Manager extends GameManager {
             }
 
             // prepare state
-            currentState.prepare(movieBuilder, playerNames);
+            state.prepare(movieBuilder, playerNames);
 
             // run game
+            // TODO
 
+            // finalize state
+            state.finalize(movieBuilder);
+
+        } catch (IOException e) {
+            throw new BuilderException(e.getMessage());
         }
     }
 
