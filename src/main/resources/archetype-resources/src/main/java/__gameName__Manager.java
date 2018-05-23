@@ -6,7 +6,6 @@ package ${package};
 import pt.up.fc.dcc.asura.builder.base.*;
 import pt.up.fc.dcc.asura.builder.base.exceptions.BuilderException;
 import pt.up.fc.dcc.asura.builder.base.exceptions.PlayerException;
-import pt.up.fc.dcc.asura.builder.base.movie.GameMovieBuilderImpl;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -18,8 +17,6 @@ import java.util.Map;
  * @author ${author} <code>${authorEmail}</code>
  */
 public class ${gameName}Manager extends GameManager {
-
-    private GameState currentState = null;
 
     @Override
     public String getGameStateClassName() {
