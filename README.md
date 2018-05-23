@@ -17,6 +17,7 @@ Prerequisites
 
 - JDK 8
 - Maven 3
+- SpiderMonkey 52+
 
 Install archetype locally
 -------------------------
