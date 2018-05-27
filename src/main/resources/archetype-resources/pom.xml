@@ -162,7 +162,7 @@
                 <configuration>
                     <includePluginDependencies>true</includePluginDependencies>
                     <mainClass>pt.up.fc.dcc.asura.builder.GameServer</mainClass>
-                    <commandlineArgs>${artifactId} ${package}.${gameName}Manager java solutions/My${gameName}Player.java player-java es6 solutions/My${gameName}PlayerES6.js player-es6</commandlineArgs>
+                    <commandlineArgs>${artifactId} ${package}.${gameName}Manager java My${gameName}Player.java player-java java My${gameName}Player.java player2-java</commandlineArgs>
                     <systemProperties>
                         <systemProperty>
                             <key>js.interpreter</key>
