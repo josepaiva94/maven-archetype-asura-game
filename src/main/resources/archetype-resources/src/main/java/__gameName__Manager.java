@@ -50,7 +50,7 @@ public class ${gameName}Manager extends GameManager {
             }
 
             // prepare state
-            state.prepare(movieBuilder, playerNames);
+            state.prepare(movieBuilder, getGameName(), playerNames);
 
             // run game
             // TODO

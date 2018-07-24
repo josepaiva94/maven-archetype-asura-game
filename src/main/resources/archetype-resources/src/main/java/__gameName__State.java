@@ -18,7 +18,7 @@ import java.util.Map;
 public class ${gameName}State implements GameState {
 
     @Override
-    public void prepare(GameMovieBuilder movieBuilder, Map<String, String> players) {
+    public void prepare(GameMovieBuilder movieBuilder, String title, Map<String, String> players) {
 
         // TODO
     }
