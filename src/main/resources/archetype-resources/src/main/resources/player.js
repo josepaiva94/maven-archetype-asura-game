@@ -71,13 +71,12 @@ function play(movie) {
     context = canvas.getContext("2d");
     waitingFor = 0;
 
-    if(header.background === undefined)
-        throw "background missing in movie header";
-
-    waitingFor++;
-    background = new Image();
-    background.onload = function() { startPlaying(); };
-    background.src = header.background;
+    if (header.background) {
+        waitingFor++;
+        background = new Image();
+        background.onload = function() { startPlaying(); };
+        background.src = header.background;
+    }
 
     if(header.sprites === undefined)
         throw "spites missing in movie header";
@@ -140,7 +139,8 @@ function continuePlaying() {
 function showFrame(frame) {
 
     context.clearRect(0,0,canvas.width,canvas.height);
-    context.drawImage(background,0,0);
+    if (background)
+        context.drawImage(background,0,0);
 
     if(frame.items === undefined)
         throw "missing item in frame:"+lastFrameIndex;
